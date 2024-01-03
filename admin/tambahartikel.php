@@ -11,7 +11,7 @@ include('template/header.php')
         <div class="card mb-4">
         <div class="card-header d-flex align-items-center justify-content-between">
             <h5 class="mb-0">Tambah Artikel</h5>
-            <small class="text-muted float-end">Default label</small>
+            <a href="tambahartikel.php" class="btn btn-info float-end">Kembali ke Beranda </a>
         </div>
         <div class="card-body">
             <form>

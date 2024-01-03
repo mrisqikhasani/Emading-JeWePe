@@ -25,7 +25,6 @@
     	</div>
     </div>
 
-
     <script src="assets/landing/js/bootstrap.bundle.min.js"></script>
     <script src="assets/landing/js/tiny-slider.js"></script>
 
@@ -37,6 +36,9 @@
     <script src="assets/landing/js/navbar.js"></script>
     <script src="assets/landing/js/counter.js"></script>
     <script src="assets/landing/js/custom.js"></script>
+
+</script>
+
 
     
   </body>

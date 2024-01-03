@@ -24,8 +24,8 @@ if (isset($_SESSION['username']) || isset($_SESSION['id_users'])) {
         
         //cek username apakah kosong
         if(!empty(trim($username)) && !empty(trim($password))) {
+
             // Select data user berdasarkan username
-            
             $query = $db->get_data_users($username);
             
             if($query) {
@@ -34,7 +34,7 @@ if (isset($_SESSION['username']) || isset($_SESSION['id_users'])) {
                 $rows = 0;                
             }
 
-            // cek ketersedian username
+            // cek ketersedian username 
             if ($rows != 0) {
                 $getData = $query->fetch_assoc();
                 // cek apakah password sama dengan yang inputkan atau tidak 

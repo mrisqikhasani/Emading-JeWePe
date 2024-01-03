@@ -17,11 +17,13 @@
       <?php 
         if(isset($_GET['pesan'])) {
           if($_GET['pesan'] == 'successfully created'){
-            echo '<div class="alert alert-success" role="alert"> <h4 class="alert-heading">Artikel berhasil dibuat!</h4></div>';
+            echo '<div class="alert alert-success alert-dismissible fade show" role="alert"> <h4 class="alert-heading">Artikel berhasil dibuat!</h4></div>';
           } else if($_GET['pesan'] == 'Successfully Update'){
             echo '<div class="alert alert-success" role="alert"> <h4 class="alert-heading">Artikel berhasil diupdate</h4></div>';
           } else if($_GET['pesan'] == 'Successfully Deleted') {
             echo '<div class="alert alert-success" role="alert"> <h4 class="alert-heading">Artikel berhasil dihapus</h4></div>';
+          } else if($_GET['pesan'] == 'Status publish berhasil diubah'){
+            echo '<div class="alert alert-success" role="alert"> <h4 class="alert-heading">Status Publish berhasil di update</h4></div>';
           } else {
           echo '<div class="alert alert-danger" role="alert"> <h4 class="alert-heading">Gagal melakukan Operasi</h4></div>';
         }
@@ -89,19 +91,19 @@
                   <ul class="dropdown-menu">
                     <?php if ($artikel['status_publish'] == 'draft') {?>
                       <li class="dropdown-item">
-                        <a class="button" href="../detail.php?id=<?=$artikel['id_artikel']?>" >
+                        <a class="button" href="request/updatestatusartikel.php?id=<?=$artikel['id_artikel']?>" >
                           <i class='bx bxs-send'></i> Publish 
                         </a>
                       </li>
                       <?php } else if($artikel['status_publish'] == 'publish') { ?>
                         <li class="dropdown-item">
-                          <a class="button" href="../detail.php?id=<?=$artikel['id_artikel']?>" >
+                          <a class="button" href="request/updatestatusartikel.php?id=<?=$artikel['id_artikel']?>" >
                           <i class='bx bx-arrow-back' ></i> Revert To Draft 
                           </a>
                         </li>
                     <?php }?>
                     <li class="dropdown-item">
-                    <a class="button" href="request/updatestatusartikel.php?id=<?=$artikel['id_artikel']?>" target="_blank">
+                    <a class="button" href="../detail.php?id=<?=$artikel['id_artikel']?>" target="_blank">
                       <i class='bx bx-detail'></i> View 
                     </a>
                     </li>

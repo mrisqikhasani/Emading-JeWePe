@@ -27,8 +27,8 @@
 
 
     <!-- Core JS -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../assets/trumbowyg/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script>window.jQuery || document.write('<script src="../assets/trumbowyg/js/vendor/jquery-3.3.1.min.js"><\/script>')</script> -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/admin/assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../assets/admin/assets/vendor/libs/popper/popper.js"></script>

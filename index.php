@@ -6,7 +6,7 @@ include('admin/config_query.php');
 
 $db = new database();
 $query = $db->get_data_artikel('status_publish', 'publish');
-$artikel = $query->fetch_all(MYSQLI_ASSOC);
+$rows = mysqli_num_rows($query);
 ?>
 	<section class="section">
 		<div class="container">
@@ -15,11 +15,14 @@ $artikel = $query->fetch_all(MYSQLI_ASSOC);
 				<div class="col-sm-6">
 					<h2 class="posts-entry-title">Mading Jewepe</h2>
 				</div>
-				<div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">View All</a></div>
+				<!-- <div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">View All</a></div> -->
 			</div>
 
-			<div class="row">
-				<?php foreach( $artikel as $key => $value ){ ?>
+			<div class="row" id="maincontent">
+				<?php 
+				if($rows != 0) {
+					$artikel = $query->fetch_all(MYSQLI_ASSOC);
+					foreach( $artikel as $key => $value ){ ?>
 				<div class="col-lg-4 mb-4">
 					<div class="post-entry-alt">
 						<a href="detail.php?id=<?=$value['id_artikel']?>" class="img-link">
@@ -50,6 +53,9 @@ $artikel = $query->fetch_all(MYSQLI_ASSOC);
 					</div>
 				</div>
 				<?php 
+					}
+				} else {
+					echo "<h3>Tidak Ada Artikel</h3>";
 				}
 				?>
 			</div>

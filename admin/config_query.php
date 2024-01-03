@@ -57,6 +57,14 @@ class database{
         return $data;
     }
 
+    public function update_status_artikel($id_artikel, $status){
+        $data = $this->koneksi->prepare("UPDATE artikel SET status_publish = ? WHERE id_artikel = ?");
+        $data->bind_param("si", $status, $id_artikel);
+        $data->execute();
+        $data->close();
+        return $data;
+    }
+
     public function delete_artikel($id)
     {
         $data = $this->koneksi->prepare('DELETE FROM artikel WHERE id_artikel =?');

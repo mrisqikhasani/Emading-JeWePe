@@ -147,11 +147,25 @@
 
           <ul class="menu-inner py-1">
             <!-- Manajemen Artikel -->
+            <!-- Layouts -->
             <li class="menu-item">
-              <a href="index.php" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Manajemen Artikel</div>
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="Dashboard">Dashboard</div>
               </a>
+
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="tambahartikel.php" class="menu-link">
+                    <div data-i18n="Tambah Data">Tambah Data</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="../index.php" class="menu-link" target="_blank">
+                    <div data-i18n="Halaman utama">Halaman utama</div>
+                  </a>
+                </li>
+              </ul>
             </li>
 
             <!-- Layouts -->

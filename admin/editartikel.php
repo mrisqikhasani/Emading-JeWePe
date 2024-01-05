@@ -19,7 +19,7 @@ if (isset($_GET['id'])) {
 ?>
 
 <div class="container-xxl flex-grow-1 container-p-y">
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms/</span> Tambah Artikel</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms/</span> Edit Artikel</h4>
 
 <form action="request/updateartikel.php" method="POST" enctype="multipart/form-data">
     <div class="row">
@@ -27,7 +27,7 @@ if (isset($_GET['id'])) {
     <div class="col-xxl">
         <div class="card mb-4">
         <div class="card-header d-flex align-items-center justify-content-between">
-            <h5 class="mb-0">Tambah Artikel</h5>
+            <h5 class="mb-0">Edit Artikel</h5>
             <small class="text-muted float-end">Default label</small>
         </div>
         <div class="card-body">
